@@ -1,0 +1,6 @@
+{
+  "description": "覆盖less变量达到主题变更的功能",
+  "values": {
+    "font-size-base": "14px"
+  }
+}

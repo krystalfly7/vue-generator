@@ -1,0 +1,40 @@
+{
+  "env": {
+    "dev": {
+      "presets": [
+        ["env", {
+          "loose": true,
+          "debug": true,
+          "targets": {
+            "browsers": ["last 1 versions", "safari >= 10"]
+          }
+        }],
+        "stage-1"
+      ],
+      "plugins": [
+        "add-module-exports",
+        "syntax-dynamic-import",
+        "transform-async-to-generator",
+        "transform-decorators-legacy",
+      ]
+    },
+    "prod": {
+      "presets": [
+        ["env",
+          {
+            "targets": {
+              "browsers": ["> 2%", "last 12 versions", "IE > 7"]
+            }
+          }
+        ], "stage-1"],
+      "plugins": [
+        "transform-runtime",
+        "add-module-exports",
+        "transform-object-assign",
+        "syntax-dynamic-import",
+        "transform-async-to-generator",
+        "transform-decorators-legacy",
+      ]
+    }
+  }
+}
